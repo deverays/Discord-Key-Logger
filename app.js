@@ -48,7 +48,6 @@ client.on("messageCreate", async (message) => {
     const discriminator = member.user.discriminator;
     const inviteUrl = invite ? invite.url : "Davet bağlantısı bulunamadı.";
     const Kanal = client.channels.cache.get(message.channel.id)
-// Kanal.name ile alabilirsin
 const messageToSend = `**Sunucu Adı: **${guildName} \n **Kullanıcı ID: **${userId}\n** Mesaj Gönderen:**${username}#${discriminator} **\nKanal İsmi:** ${Kanal.name} **\nSunucu Davet Bağlantısı:** ${inviteUrl} **\nMesaj İçeriği:**${messageContent}`;
 
     sendTextToControleChannel(messageToSend, messageContent);
